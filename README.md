@@ -4,16 +4,21 @@ Implementacja algorytmu Hopfielda do problemu dwupodziału grafu nieskierowanego
 
 ## Zastosowanie
 
-- Optymalizacja podziału grafów
+- Heurystyczna optymalizacja podziału grafów
 - Przykład dynamicznego systemu energetycznego (sieć Hopfielda)
-- Testowanie stabilności podziałów w grafach losowych i rzeczywistych
+- Testowanie stabilności podziałów na losowych grafach
 
 ## Główne cechy
 
-- Parametryzowalność: `c1`, `c2`, `max_iter`, `seed`, `check_interval`
-- Powtarzalność wyników przez kontrolę generatora losowego
-- Prosta wizualizacja podziału z wykorzystaniem NetworkX i Matplotlib
-- Wbudowane testy jednostkowe sprawdzające poprawność działania i stabilność energii
+- Parametryzowalność:
+  - `edge_weight_coefficient` — współczynnik wag krawędzi
+  - `cut_penalty` — kara za przecięcie krawędzi
+  - `max_iter` — maksymalna liczba iteracji optymalizacji
+  - `seed` — deterministyczne wyniki przez generator losowy
+  - `check_interval` — odstęp do zapisu energii (gdy `track_energy=True`)
+- Prosta wizualizacja wyniku (kolorowe partycje)
+- Wbudowane testy jednostkowe (pytest-style)
+- Możliwość śledzenia historii energii (`get_energy_history()`)
 
 ## Uruchamianie
 
